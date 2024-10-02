@@ -10,7 +10,7 @@ function Picture({
 
   const firstName = user.firstName || 'User';
   const lastName = user.lastName || 'Name';
-  if (user.picture) {
+  if (user.picture && (user.picture.shieldedID != "")) {
     return (
       <img src={`${Config.url || ''}/api/images/${user.picture.shieldedID}/256`} alt="Picture" className="picture" />
     );
